@@ -1,4 +1,4 @@
-# web_scraping
+# Skrtz_scraper
 
 Google sheet (front-end) created by Dimitrios Panourgias
 <br/> Python script (back-end) created by Dimitrios Panourgias
