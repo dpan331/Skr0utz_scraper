@@ -32,7 +32,7 @@ The script reads a csv (productList.csv) with product names (manual input).
 <br/> 
 
 ## Google sheet (front-end)
-For better comprehension and visualization of the retrieved information, the data from resultsList.csv can be passed to the Google Spreadsheet's sheet "raw".
+For better comprehension and visualization of the retrieved information, the data from resultsList.csv can be passed to the Google Spreadsheet's sheet "raw". *Here you will find the downloaded version (in .xlsx format) of the Google Spreadsheet.*
 
 <br/> By following the "instructions" sheet, the data are processed and provided elegantly in the "analysis" sheet. Specifically, the user defines his/her shop name and & to 3 competitors, and the model provides a competitive price analysis.
 
