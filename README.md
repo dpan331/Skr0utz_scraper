@@ -22,7 +22,7 @@ The script reads a csv (productList.csv) with product names (manual input).
 <img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productSearchBar.JPG" height="150" width="600">
 
 <br/> If the result is a single product, the script proceeds to this product page (and applies the label: "original"),
-<br/> otherwise -if the search matches multiple products- the script retrieves the results' product names, performs word matching to pick the best match with the desired product and then proceedσ to the product page.
+<br/> otherwise -if the search matches multiple products- the script retrieves the results' product names, performs word matching to pick the best match with the desired product (applies the label: "best_match") and then proceeds to the product page.
 <img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/bestMatch.JPG" height="400" width="500">
 
 <br/> Once in the product page, the script iterates over all the shops using Selenium, retrieves for each shop the fields: initial price, shipping cost, pay-to-delivery cost, final price & availability, and pushes these information to a dataframe.
