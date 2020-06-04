@@ -32,7 +32,7 @@ The script reads a csv (productList.csv) with product names (manual input).
 <br/> 
 
 ## Google sheet (front-end)
-For better comprehension and visualization of the retrieved information, the data from resultsList.csv can be passed to the Google Spreadsheet's sheet "raw". *Here you will find the downloaded version (in .xlsx format) of the Google Spreadsheet.*
+For better comprehension and visualization of the retrieved information, the data from resultsList.csv can be passed to the Google Spreadsheet's sheet "raw". *Here you will find the downloaded version (in .xlsx format) of the Google Spreadsheet. Thus certain formulas in some cells do not operate.*
 
 <br/> By following the "instructions" sheet, the data are processed and provided elegantly in the "analysis" sheet. Specifically, **the user defines his/her shop name and & to 3 competitors, and the model provides a comparative price analysis.**
 
@@ -43,5 +43,5 @@ For better comprehension and visualization of the retrieved information, the dat
 ## Other actions
 *- The visualization can be set to any tool you prefer: Excel, Google Data Studio, Power BI, Tableau, etc.*
 <br/> *- The front-end analysis can be expanded depending on additional data the shop owner can provide. Imagine having the profit margin (shop's average, product categories' or even granular to each product) and also matching Skr0utz's commission (according to the shop owner's chosen cost model). The possibilities for further analysis are endless!*
-<br/> *- The python script is not complete. Minor fixes can further improve the performance (i.e. in the situation where Skroutz's search bar provides as a result a single product that is provided by a sole seller, the route is redirected to the seller's website. The python script could specify this to the dataframe and not omit this product.)*
+<br/> *- The python script is not complete. Minor fixes can further improve the performance (i.e. in the situation where Skroutz's search bar provides as a result a single product that is provided by a sole seller, the route is redirected to the seller's website. The python script could specify this to the dataframe and not omit this product).*
 
