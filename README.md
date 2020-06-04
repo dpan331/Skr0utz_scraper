@@ -8,10 +8,11 @@ to cause any harm to the website
 that uses to scrap data.** <br/> The
 requests that are set by the script are performed
 relatively slow, simulating the speed of a human user.
-<br/> Still, this script is only for personal portfolio & educational purposes and not destined to be used by third parties for commercial or any other purpose that might harm the smooth operation of the source website.
+<br/> Still, this script is **only for personal portfolio & educational purposes** and not destined to be used by third parties for commercial or any other purpose that might harm the smooth operation of the source website.
+<br/> **Keep in mind that, according to Skroutz.gr terms, navigating the website with the use of automated software is prohibited.**
 
-
-It can retrieve numerous product details and along with the Google Sheet model provide comparative price analysis with up to 3 competitors of the user's choice.
+<br/> **Scope of the script:**
+<br/> The script can retrieve numerous product details and along with the Google Sheet model provide comparative price analysis with up to 3 competitors of the user's choice.
 
 ## Python script (back-end) 
 The script reads a csv (productList.csv) with product names (manual input). 
@@ -40,7 +41,7 @@ For better comprehension and visualization of the retrieved information, the dat
 
 
 ## Other actions
-*- The visualization can be set to any tool you prefer, Excel, Google Data Studio, Power BI, Tableau, etc.*
+*- The visualization can be set to any tool you prefer: Excel, Google Data Studio, Power BI, Tableau, etc.*
 <br/> *- The front-end analysis can be expanded depending on additional data the shop owner can provide. Imagine having the profit margin (shop's average, product categories' or even granular to each product) and also matching Skroutz's commission (according to the shop owner's chosen cost model). The possibilities for further analysis are endless!*
 <br/> *- The python script is not complete. Minor fixes can further improve the performance (i.e. in the situation where Skroutz's search bar provides as a result a single product that is provided by a sole seller, the route is redirected to the seller's website. The python script could specify this to the dataframe and not omit this product.)*
 
