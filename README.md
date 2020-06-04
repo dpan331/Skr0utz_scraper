@@ -12,7 +12,7 @@ very slowly, simulating the speed of a human user.
 
 ## Python script (back-end) 
 The script reads a csv (productList.csv) with product names (manual input). 
-![alt text](https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productsList.JPG?raw=true)
+![alt text](https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productsList.JPG =250x250)
 
 Then proceeds to search each product name (from the csv) in Skroutz's search bar. 
 <br/> If the result is a single product, the script proceeds to this product page (and applies the label: "original"),
