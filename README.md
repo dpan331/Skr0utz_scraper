@@ -12,13 +12,17 @@ very slowly, simulating the speed of a human user.
 
 ## Python script (back-end) 
 The script reads a csv (productList.csv) with product names (manual input). 
-<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productsList.JPG" height="200" width="600">
+<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productsList.JPG" height="150" width="600">
 
 Then proceeds to search each product name (from the csv) in Skroutz's search bar. 
+<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/productSearchBar.JPG" height="150" width="600">
+
 <br/> If the result is a single product, the script proceeds to this product page (and applies the label: "original"),
 <br/> otherwise -if the search matches multiple products- the script retrieves the results' product names, performs word matching to pick the best match with the desired product and then proceedσ to the product page.
+<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/bestMatch.JPG" height="400" width="500">
 
 Once in the product page, the script iterates over all the shops using Selenium, retrieves for each shop the fields: initial price, shipping cost, pay-to-delivery cost, final price & availability, and pushes these information to a dataframe.
+<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/fetchData.JPG" height="400" width="600">
 
 Finally, the aggregated data in the dataframe are exported in a csv (resultsList.csv).
 
@@ -27,3 +31,5 @@ Finally, the aggregated data in the dataframe are exported in a csv (resultsList
 For better comprehension and visualization of the retrieved information, the data from resultsList.csv can be passed to the Google Spreadsheet's sheet "raw".
 
 By following the instructions, the data are processed and provided elegantly in the "analysis" sheet. Specifically, the user defines his/her shop name and & to 3 competitors, and the model provides a competitive price analysis.
+<img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/googleSheetSkroutz.JPG" height="200" width="6800">
+
