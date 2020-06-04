@@ -1,7 +1,7 @@
 # web_scraping
 
 Google sheet (front-end) created by Dimitrios Panourgias
-Python script (back-end) created by Dimitrios Panourgias
+\n Python script (back-end) created by Dimitrios Panourgias
 May 2020
 
 This algorithm does not by any means aim
