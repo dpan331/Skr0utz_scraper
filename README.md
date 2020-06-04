@@ -7,8 +7,9 @@ This script **does not by any means aim
 to cause any harm to the website
 that uses to scrap data.** <br/> For this purpose, the
 requests that are set by the script are performed
-very slowly, simulating the speed of a human user.
+relatively slow, simulating the speed of a human user.
 
+It can retrieve numerous product details and along with the Google Sheet model provide comparative price analysis with up to 3 competitors of the user's choice.
 
 ## Python script (back-end) 
 The script reads a csv (productList.csv) with product names (manual input). 
@@ -35,8 +36,8 @@ For better comprehension and visualization of the retrieved information, the dat
 <br/> <img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/googleSheetSkroutz.JPG" height="200" width="6800">
 
 
-### Other actions
 
+### Other actions
 <br/> *- The visualization can be set to any tool you prefer, Excel, Google Data Studio, Power BI, Tableau, etc.*
 <br/> *- The front-end analysis can be expanded depending on additional data the shop owner can provide. Imagine having the profit margin (shop's average, product categories' or even granular to each product) and also matching Skroutz's commission (according to the shop owner's chosen cost model). The possibilities for further analysis are endless!*
 <br/> *- The python script is not complete. Minor fixes can further improve the performance (i.e. in the situation where Skroutz's search bar provides as a result a single product that is provided by a sole seller, the route is redirected to the seller's website. The python script could specify this to the dataframe and not omit this product.)*
