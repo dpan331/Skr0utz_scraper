@@ -1,3 +1,14 @@
+"""
+created by Dimitrios Panourgias
+May 2020
+
+Not to be used for commercial or any other purpose
+that might harm the smooth operation of Skroutz.gr
+"""
+
+
+
+
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
