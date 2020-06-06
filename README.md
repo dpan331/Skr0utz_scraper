@@ -11,6 +11,10 @@ relatively slow, simulating the speed of a human user.
 <br/> Still, this script is **only for personal portfolio & educational purposes** and not destined to be used by third parties for commercial or any other purpose that might harm the smooth operation of the source website.
 <br/> **Keep in mind that, according to Skr0utz.gr terms, navigating the website with the use of automated software is prohibited.**
 
+*The Author does not continue to maintain the script,
+<br/> so, in time, certain operations or even the entire script 
+<br/> may not be functional.*
+
 <br/> **Scope of the script:**
 <br/> The script can retrieve numerous product details and along with the Google Sheet model provide comparative price analysis with up to 3 competitors of the user's choice.
 
