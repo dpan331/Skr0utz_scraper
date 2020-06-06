@@ -1,6 +1,6 @@
 # Skr0utz_scraper
-Python script (back-end) created by Dimitrios Panourgias
-<br/> Google sheet (front-end) created by Dimitrios Panourgias
+Python script (back-end) created by **Dimitrios Panourgias**
+<br/> Google sheet (front-end) created by **Dimitrios Panourgias**
 <br/> May 2020
 
 This script **does not by any means aim
