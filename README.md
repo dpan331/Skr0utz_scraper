@@ -49,3 +49,6 @@ For better comprehension and visualization of the retrieved information, the dat
 <br/> *- The front-end analysis can be expanded depending on additional data the shop owner can provide. Imagine having the profit margin (shop's average, product categories' or even granular to each product) and also matching Skr0utz's commission (according to the shop owner's chosen cost model). The possibilities for further analysis are endless!*
 <br/> *- The python script is not complete. Minor fixes can further improve the performance (i.e. in the situation where Skroutz's search bar provides as a result a single product that is provided by a sole seller, the route is redirected to the seller's website. The python script could specify this to the dataframe and not omit this product).*
 
+
+<br/> <img src="https://github.com/dpan331/Skr0utz_scraper/blob/master/skrtz_img/it-crowd-moss-fire.jpg" height="200" width="350">
+
