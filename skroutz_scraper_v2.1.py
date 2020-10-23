@@ -68,44 +68,9 @@ def getProductList():
     # initiate the dataframe that will collect all data
     dataTable = pd.DataFrame(columns=['product_name', 'label', 'shop_name', 'initial_price',
                                       'ship_cost', 'pay_cost', 'final_price', 'availability'])
-    # declare iterator to concat dataframes
-    it = 0
-    for product in productList:
-        strProd = ""
-        strProd = strProd.join(product)
-        urlSearch = 'https://www.skroutz.gr/search?keyphrase=' + strProd
-        searchProduct = simple_get(urlSearch)
-        html = BeautifulSoup(searchProduct, 'html.parser')
-        # Fetch the itemtype of the search result page (Product or WebPage)
-        htmlItemType = html.find('html').attrs
-        splitHtmlItemType = htmlItemType['itemtype'].split('/')
-        # if itemtype == Product then label = original
-        # if itemtype == WebPage then label = bestmatch
-        label = 'original'
-        if 'Product' in splitHtmlItemType: # meaning single product search result, itemtype == Product
-            if it == 0: # for the first iteration feed the fetchDataForProduct function the initial empty dataframe
-                endResult = fetchDataForProduct(urlSearch, strProd, label, dataTable)
-                it += 1
-            else: # for the next iterations refeed the fetchDataForProduct function with the populated dataframe
-                endResult = fetchDataForProduct(urlSearch, strProd, label, endResult)
-                it += 1
-        else: # meaning multiple search bar results, itemtype == WebPage
-            label = 'best_match'
-            # get the link of each search bar result
-            anchors = html.find_all('a', {'class': 'js-sku-link', 'href': True})
-            anchor_list = []
-            for anchor in anchors:
-                anchor_list.append(anchor['href'])
-            # call the bestLinkMatch function to identify the search bar result that
-            # best matches the search query product
-            bestProductMatch = 'https://www.skroutz.gr' + bestLinkMatch(urlSearch, anchor_list)
-            if it == 0: # for the first iteration feed the fetchDataForProduct function the initial empty dataframe
-                endResult = fetchDataForProduct(bestProductMatch, strProd, label, dataTable)
-                it += 1
-            else: # for the next iterations refeed the fetchDataForProduct function with the populated dataframe
-                endResult = fetchDataForProduct(bestProductMatch, strProd, label, endResult)
-                it += 1
-        time.sleep(10)
+     
+    #### HIDDEN CODE ROWS ###
+        
     return endResult
 
 
@@ -150,38 +115,9 @@ def fetchDataForProduct(productURL, productName, labl, df):
         x = 'window.scrollTo(0, ' + str(scr_down) + ')'
         driver.execute_script(x)
         scr_down += 600 # define the step to scroll down
-        time.sleep(SCROLL_PAUSE_TIME)
-        if (scr_down == last_height or scr_down > last_height): # define the break condition for the loop
-            break
-        shopName = driver.find_elements(By.CLASS_NAME, 'shop-name')
-        priceContent = driver.find_elements(By.CLASS_NAME, 'price-content')
-        availability = driver.find_elements(By.CLASS_NAME, 'availability')
-    # declare the dataframe that populates the data for the specific product
-    df_add = pd.DataFrame(columns=['product_name', 'label', 'shop_name', 'initial_price',
-                                   'ship_cost', 'pay_cost', 'final_price', 'availability'])
-    # fetch data for each shop name that appears in the product results
-    for i in range(0, len(shopName)):
-        x = shopName[i].text
-        y = priceContent[i].text
-        z = availability[i].text
-        y_cl = y.split()
-        try:
-            # the product name is needed to appear duplicated in each row
-            # to ease the use of pivot tables later
-            # the same holds for the label
-            df_add = df_add.append({'product_name': productName,
-                                    'label': labl,
-                                    'shop_name': x,
-                                    'initial_price': y_cl[0],
-                                    'ship_cost': y_cl[3],
-                                    'pay_cost': y_cl[7],
-                                    'final_price': y_cl[10],
-                                    'availability' : z},
-                                    ignore_index=True)
-        except:
-            continue
-    df = pd.concat([df, df_add], axis=0, ignore_index=True)
-    print(df_add)
+       
+    ### HIDDEN CODE ROWS ###
+    
     driver.quit()
     return df
 
