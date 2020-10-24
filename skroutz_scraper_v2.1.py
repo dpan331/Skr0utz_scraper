@@ -85,15 +85,9 @@ def bestLinkMatch(seedLink, pageLinks):
     numMatch = []
     bestLink = pageLinks[0]
     for i in range(0, len(pageLinks)):
-        y = pageLinks[i].split("-")
-        results = {}
-        for g in seedLink:
-            results[g] = y.count(g)
-        numMatch.append(sum(results.values()))
-        # split seedlink and pagelinks to words and count the identical words between them
-        # if count of identical words matches and len of words is same or less declare best match
-        if (numMatch[i] == len(seedLink) and len(seedLink) >= len(y)):
-            bestLink = pageLinks[i]
+     
+    #### HIDDEN CODE ROWS ###
+        
     return bestLink
 
 
@@ -107,15 +101,7 @@ def fetchDataForProduct(productURL, productName, labl, df):
     driver.maximize_window()
     time.sleep(10)
     SCROLL_PAUSE_TIME = 5
-    # Get scroll height till bottom of page
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    # Define scroll iterator
-    scr_down = 600
-    while True: # scroll down the page step by step to simultaneously fetch the data
-        x = 'window.scrollTo(0, ' + str(scr_down) + ')'
-        driver.execute_script(x)
-        scr_down += 600 # define the step to scroll down
-       
+
     ### HIDDEN CODE ROWS ###
     
     driver.quit()
